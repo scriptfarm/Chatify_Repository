@@ -32,17 +32,20 @@ public class ChatArrayAdapter extends ArrayAdapter<ChatMessage> {
 
             MessageList.add(object);
             super.add(object);
-        }
+    }
+
 
     public int getCount()
     {
         return this.MessageList.size();
     }
 
+
     public ChatMessage getItem(int index){
 
         return this.MessageList.get(index);
     }
+
 
     public View getView(int position,View ConvertView, ViewGroup parent){
 

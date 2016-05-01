@@ -1,6 +1,8 @@
 package schaschinger.chatify.com.chatify;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.database.DataSetObserver;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,12 +15,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -69,7 +73,7 @@ public class Act_Main extends AppCompatActivity {
         Log.i(TAG, " - Username " + this.userName + " - ServerIP " + this.serverAddress + " - Serverport " + this.serverPort);
 
         client = new ClientInterface(this.userName, this.serverAddress, this.serverPort);
-        Log.i(TAG, "Created ClientInteface : "  + client.toString());
+        Log.i(TAG, "Created ClientInteface : " + client.toString());
 
 
         initialize();
@@ -80,6 +84,7 @@ public class Act_Main extends AppCompatActivity {
      */
     private void initialize(){
 
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -90,16 +95,9 @@ public class Act_Main extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        */
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
 
@@ -161,6 +159,9 @@ public class Act_Main extends AppCompatActivity {
             return rootView;
         }
     }
+
+
+
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

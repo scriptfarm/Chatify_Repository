@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         >
-        <activity android:name=".Act_Login">
+        <activity android:name=".Act_Login"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +26,8 @@
         <activity
             android:name=".Act_Main"
             android:label="@string/title_activity_act__main"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -30,12 +35,27 @@
         </activity>
 
         <activity
-            android:name=".ChatActivity">
+            android:name=".ChatActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            >
 
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ChatActivityScreenSlidePagerActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            >
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -73,7 +73,7 @@ public class Act_Login extends AppCompatActivity {
     public final static String EXTRA_SERVERPORT = "schaschinger.chatify.com.chatify.SERVERPORT";
 
     private void startMainActivity(String username, String serverip, String serverport){
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, ChatActivityScreenSlidePagerActivity.class);
         intent.putExtra(EXTRA_USERNAME, username);
         intent.putExtra(EXTRA_SERVERIP, serverip);
         intent.putExtra(EXTRA_SERVERPORT, serverport);
